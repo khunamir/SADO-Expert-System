@@ -104,6 +104,7 @@ class _CompeititionScreenState extends State<CompeititionScreen> {
                             user.calculateEquation();
                             httpServices.callEngine().then(
                                   (recommendation) => {
+                                    print(recommendation),
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(

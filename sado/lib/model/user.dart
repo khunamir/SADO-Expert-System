@@ -135,18 +135,48 @@ class User {
 
   calculateBMI() {
     double bmi = 0.0;
-    bmi = height / (weight * weight);
+    double heightInM = height / 100;
+    bmi = weight / (heightInM * heightInM);
     setBMI(bmi);
   }
 
   calculateEquation() {
     double calorieGoals = 0.0;
-    if (gender == "Male") {
-      calorieGoals = (10 * weight) + (6.25 * (height * 100)) - (5 * age) + 5;
+    if (gender == "Male" || gender == "male") {
+      calorieGoals = (10 * weight) + (6.25 * height) - (5 * age) + 5;
     } else {
-      calorieGoals = (10 * weight) + (6.25 * (height * 100)) - (5 * age) + 161;
+      calorieGoals = (10 * weight) + (6.25 * height) - (5 * age) - 161;
     }
     setEquation(calorieGoals);
+  }
+
+  explanationFac() {
+    String str = "\n\nSince your gender is " +
+        gender +
+        " and your age is " +
+        age.toString() +
+        ". \nWe calculated your calorie goals using Mifflin St Jeor Equation." +
+        "\nAnd your calorie goals is " +
+        equation.toString() +
+        "kcal\n";
+    if (bmi < 18.5) {
+      str = str +
+          "\n\nBased on your BMI, " +
+          bmi.toString() +
+          " it is underweight. ";
+    } else if (bmi >= 18.5 && bmi < 25.0) {
+      str = str +
+          "\n\nBased on your BMI, " +
+          bmi.toStringAsFixed(1) +
+          " it is normal. ";
+    } else {
+      str = str +
+          "\n\nBased on your BMI, " +
+          bmi.toString() +
+          " it is overweight. ";
+    }
+    str = str + "\n";
+    return str;
   }
 
   void setBMI(double bmi) {
