@@ -162,9 +162,9 @@ class User {
     if (bmi < 18.5) {
       str = str +
           "\n\nBased on your BMI, " +
-          bmi.toString() +
+          bmi.toStringAsFixed(1) +
           " it is underweight. ";
-    } else if (bmi >= 18.5 && bmi < 25.0) {
+    } else if (bmi >= 18.5 && bmi < 28.0) {
       str = str +
           "\n\nBased on your BMI, " +
           bmi.toStringAsFixed(1) +
@@ -172,7 +172,7 @@ class User {
     } else {
       str = str +
           "\n\nBased on your BMI, " +
-          bmi.toString() +
+          bmi.toStringAsFixed(1) +
           " it is overweight. ";
     }
     str = str + "\n";
