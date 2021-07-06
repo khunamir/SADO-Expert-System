@@ -151,7 +151,7 @@ class User {
   }
 
   explanationFac() {
-    String str = "\n\nSince your gender is " +
+    String str = "\nSince your gender is " +
         gender +
         " and your age is " +
         age.toString() +
@@ -161,17 +161,17 @@ class User {
         "kcal\n";
     if (bmi < 18.5) {
       str = str +
-          "\n\nBased on your BMI, " +
+          "Based on your BMI, " +
           bmi.toStringAsFixed(1) +
           " it is underweight. ";
     } else if (bmi >= 18.5 && bmi < 28.0) {
       str = str +
-          "\n\nBased on your BMI, " +
+          "Based on your BMI, " +
           bmi.toStringAsFixed(1) +
           " it is normal. ";
     } else {
       str = str +
-          "\n\nBased on your BMI, " +
+          "Based on your BMI, " +
           bmi.toStringAsFixed(1) +
           " it is overweight. ";
     }

@@ -18,13 +18,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       builder: (context, widget) => ResponsiveWrapper.builder(
         widget,
-        maxWidth: 1200,
         minWidth: 480,
         defaultScale: true,
         breakpoints: [
-          ResponsiveBreakpoint.resize(480, name: MOBILE),
-          ResponsiveBreakpoint.autoScale(800, name: TABLET),
-          ResponsiveBreakpoint.resize(1000, name: DESKTOP),
+          ResponsiveBreakpoint.autoScaleDown(380, name: 'IPHONE5'),
+          ResponsiveBreakpoint.resize(410, name: MOBILE),
+          ResponsiveBreakpoint.autoScale(700, name: TABLET),
+          ResponsiveBreakpoint.autoScale(1000, name: TABLET),
+          ResponsiveBreakpoint.resize(1200, name: DESKTOP),
+          ResponsiveBreakpoint.resize(2460, name: '4K'),
         ],
         background: Container(
           color: Color(0xFFF5F5F5),
@@ -41,6 +43,7 @@ class MyApp extends StatelessWidget {
         '/assessment': (context) => AssessmentScreen(),
         '/compeitition': (context) => CompeititionScreen(),
         '/recommendation': (context) => RecommendationScreen(),
+        // '/': (context) => RecommendationScreen(),
       },
     );
   }
