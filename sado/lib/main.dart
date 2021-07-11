@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           color: Color(0xFFF5F5F5),
         ),
       ),
-      title: 'Flutter Demo',
+      title: 'SADO Expert System',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,

@@ -3,8 +3,8 @@ import 'package:sado/model/recommendation.dart';
 import 'package:sado/model/user.dart';
 
 class HttpServices {
-  // String url = "https://sado-es.herokuapp.com/"; // Flask local development
-  String url = "http://127.0.0.1:5000/";
+  String url = "https://sado-es.herokuapp.com/"; // Flask local development
+  // String url = "http://127.0.0.1:5000/";
   callEngine() async {
     try {
       var response =
