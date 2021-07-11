@@ -140,6 +140,95 @@ class User {
     setBMI(bmi);
   }
 
+  statusBMI() {
+    if (bmi < 18.5) {
+      return 'underweight';
+    } else if (bmi >= 18.5 && bmi < 28.0) {
+      return 'normal';
+    } else {
+      return 'overweight';
+    }
+  }
+
+  recommendedSet() {
+    String explanation = '';
+    if (participate == 'y') {
+      if (intensity == 'low') {
+        if (statusBMI() == 'overweight' || statusBMI() == 'normal') {
+          if (equation < 1300) {
+            explanation =
+                'Your intensity of training is low.\nThus, we recommend Low Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal. \nThe food in Set D can supply right amount of calorie,\nunder 1300kcal, which suits your need. \n\nTo maintain the energy reservation for your compeitition.';
+          } else if (equation >= 1300 && equation < 1700) {
+            explanation =
+                'Your intensity of training is low.\nThus, we recommend Low Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal. \nThe food in Set E can supply right amount of calorie,\nbetween 1300kcal to 1700kcal, which suits your need. \n\nTo maintain the energy reservation for your compeitition.';
+          } else if (equation >= 1700) {
+            explanation =
+                'Your intensity of training is low.\nThus, we recommend Low Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal. \nThe food in Set F can supply right amount of calorie,\nabove 1700kcal, which suits your need. \n\nTo maintain the energy reservation for your compeitition.';
+          }
+        } else {
+          if (equation < 1700) {
+            explanation =
+                'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set G can supply right amount of calorie, \nunder 1700kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and gaining some weight.';
+          } else if (equation >= 1700 && equation < 2100) {
+            explanation =
+                'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set H can supply right amount of calorie, \nbetween 1700kcal to 2100kcal, which suits your \nneed. \nThe recommendation can help you to maintain the energy reservation and gaining some weight.';
+          } else if (equation >= 2100) {
+            explanation =
+                'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set H can supply right amount of calorie, \nabove 2100kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and gaining some weight.';
+          }
+        }
+      } else if (intensity == 'moderate') {
+        if (equation < 1700) {
+          explanation =
+              'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set G can supply right amount of calorie, \nunder 1700kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and gaining some weight.';
+        } else if (equation >= 1700 && equation < 2100) {
+          explanation =
+              'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set H can supply right amount of calorie, \nbetween 1700kcal to 2100kcal, which suits your \nneed. \nThe recommendation can help you to maintain the energy reservation and gaining some weight.';
+        } else if (equation >= 2100) {
+          explanation =
+              'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set H can supply right amount of calorie, \nabove 2100kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and gaining some weight.';
+        }
+      } else if (intensity == 'high') {
+        if (statusBMI() == 'underweight' || statusBMI() == 'normal') {
+          if (equation < 2100) {
+            explanation =
+                'Your intensity of training is high.\nThus, we recommend High Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal. \nThe food in Set J can supply right amount of calorie, \nunder 2100kcal, which suits your need. \n\nTo maintain the energy reservation for your compeitition.';
+          } else if (equation >= 2100 && equation < 2500) {
+            explanation =
+                'Your intensity of training is high.\nThus, we recommend High Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal. \nThe food in Set K can supply right amount of calorie, \nbetween 2100kcal to 2500kcal, which suits your \nneed. \nTo maintain the energy reservation for your compeitition.';
+          } else if (equation >= 2500) {
+            explanation =
+                'Your intensity of training is high.\nThus, we recommend High Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal. \nThe food in Set L can supply right amount of calorie, \nabove 2500kcal, which suits your need. \n\nTo maintain the energy reservation for your compeitition.';
+          }
+        } else {
+          if (equation < 1700) {
+            explanation =
+                'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set G can supply right amount of calorie, \nunder 1700kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and losing some weight.';
+          } else if (equation >= 1700 && equation < 2100) {
+            explanation =
+                'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set H can supply right amount of calorie, \nbetween 1700kcal to 2100kcal, which suits your \nneed. \nThe recommendation can help you to maintain the energy reservation and losing some weight.';
+          } else if (equation >= 2100) {
+            explanation =
+                'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set H can supply right amount of calorie, \nabove 2100kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and losing some weight.';
+          }
+        }
+      }
+    } else {
+      // Casual Meal Planning
+      if (equation < 1500) {
+        explanation =
+            'We recommend Casual Meal Planning for your diet stratergy. \n\nWith the given calorie goal. \nThe food in Set A can supply right amount of calorie, \nunder 1500kcal, which suits your need. \n\nTo maintain the energy reservation.';
+      } else if (equation >= 1500 && equation < 2500) {
+        explanation =
+            'We recommend Casual Meal Planning for your diet stratergy. \n\nWith the given calorie goal. \nThe food in Set B can supply right amount of calorie, \nbetween 1500kcal to 2500kcal, which suits your \nneed. \nTo maintain the energy reservation.';
+      } else if (equation >= 2500) {
+        explanation =
+            'We recommend Casual Meal Planning for your diet stratergy. \n\nWith the given calorie goal. \nThe food in Set C can supply right amount of calorie, \nabove 2500kcal, which suits your need. \n\nTo maintain the energy reservation.';
+      }
+    }
+    return explanation;
+  }
+
   calculateEquation() {
     double calorieGoals = 0.0;
     if (gender == "Male" || gender == "male") {
@@ -151,29 +240,29 @@ class User {
   }
 
   explanationFac() {
-    String str = "\nSince your gender is " +
-        gender +
-        " and your age is " +
+    String str = "\nYou are a " +
         age.toString() +
-        ". \nWe calculated your calorie goals using Mifflin St Jeor Equation." +
-        "\nAnd your calorie goals is " +
+        ' years old, ' +
+        gender +
+        ". \nYour calorie goals was calculated using Mifflin St Jeor Equation." +
+        "\nYour calorie goals is " +
         equation.toString() +
-        "kcal\n";
+        "kcal per day\n";
     if (bmi < 18.5) {
       str = str +
-          "Based on your BMI, " +
+          "Based on your BMI = " +
           bmi.toStringAsFixed(1) +
-          " it is underweight. ";
+          ", you are underweight. ";
     } else if (bmi >= 18.5 && bmi < 28.0) {
       str = str +
-          "Based on your BMI, " +
+          "Based on your BMI = " +
           bmi.toStringAsFixed(1) +
-          " it is normal. ";
+          " you are normal. ";
     } else {
       str = str +
-          "Based on your BMI, " +
+          "Based on your BMI = " +
           bmi.toStringAsFixed(1) +
-          " it is overweight. ";
+          " you are overweight. ";
     }
     str = str + "\n";
     return str;

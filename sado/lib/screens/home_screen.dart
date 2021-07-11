@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("assets/images/sado-bg.png"),
-                  fit: BoxFit.fitWidth,
+                  fit: BoxFit.fitHeight,
                 ),
               ),
               child: Center(
@@ -38,7 +38,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Text(
                         "Smart Application Diet Organizer",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 30),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                     Padding(
@@ -103,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Container(
-              height: MediaQuery.of(context).size.height * 0.5,
+              // height: MediaQuery.of(context).size.height * 0.5,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 color: Colors.blue,
@@ -129,9 +132,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(
-                      0,
+                      15,
                       30,
-                      0,
+                      15,
                       10,
                     ),
                     child: Text(
@@ -148,9 +151,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Padding(
                     padding: EdgeInsets.fromLTRB(
-                      0,
+                      15,
                       MediaQuery.of(context).size.height * 0.05,
-                      0,
+                      15,
                       10,
                     ),
                     child: Text(
@@ -163,11 +166,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(
-                      0,
+                    padding: EdgeInsets.fromLTRB(
+                      15,
                       30,
-                      0,
-                      10,
+                      15,
+                      MediaQuery.of(context).size.height * 0.05,
                     ),
                     child: Text(
                       'Users will undergo clinical assessment for the system to calculate the BMI and Calorie Goal' +
@@ -211,9 +214,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(
-                      0,
+                      15,
                       30,
-                      0,
+                      15,
                       10,
                     ),
                     child: Text(
@@ -237,12 +240,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       0,
                       10,
                     ),
-                    child: Text(
-                      'How it works?',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 30,
-                        color: Colors.white,
+                    child: Tooltip(
+                      message:
+                          'Already updated the MySejahtera. Are we geng now? hahaha',
+                      child: Text(
+                        'All rights reserved. BEDEZUB',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                          color: Colors.blue,
+                        ),
                       ),
                     ),
                   ),

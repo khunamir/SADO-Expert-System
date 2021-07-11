@@ -27,6 +27,7 @@ dependencies:
   dio: ^4.0.0
   responsive_framework: ^0.1.0
   url_strategy: ^0.2.0
+  syncfusion_flutter_sliders: ^19.2.46
 
 dev_dependencies:
   flutter_test:
