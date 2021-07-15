@@ -242,7 +242,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     child: Tooltip(
                       message:
-                          'Already updated the MySejahtera. Are we geng now? hahaha',
+                          'Already got my vaccine. Are we geng now? hahaha',
                       child: Text(
                         'All rights reserved. BEDEZUB',
                         style: TextStyle(
