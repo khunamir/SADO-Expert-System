@@ -168,25 +168,25 @@ class User {
         } else {
           if (equation < 1700) {
             explanation =
-                'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set G can supply right amount of calorie, \nunder 1700kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and gaining some weight.';
+                'Your intensity of training is low.\nBut, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set G can supply right amount of calorie, \nunder 1700kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and gaining some weight.';
           } else if (equation >= 1700 && equation < 2100) {
             explanation =
-                'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set H can supply right amount of calorie, \nbetween 1700kcal to 2100kcal, which suits your \nneed. \nThe recommendation can help you to maintain the energy reservation and gaining some weight.';
+                'Your intensity of training is low.\nBut, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set H can supply right amount of calorie, \nbetween 1700kcal to 2100kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and gaining some weight.';
           } else if (equation >= 2100) {
             explanation =
-                'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set H can supply right amount of calorie, \nabove 2100kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and gaining some weight.';
+                'Your intensity of training is low.\nBut, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set I can supply right amount of calorie, \nabove 2100kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and gaining some weight.';
           }
         }
       } else if (intensity == 'moderate') {
         if (equation < 1700) {
           explanation =
-              'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set G can supply right amount of calorie, \nunder 1700kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and gaining some weight.';
+              'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set G can supply right amount of calorie, \nunder 1700kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation';
         } else if (equation >= 1700 && equation < 2100) {
           explanation =
-              'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set H can supply right amount of calorie, \nbetween 1700kcal to 2100kcal, which suits your \nneed. \nThe recommendation can help you to maintain the energy reservation and gaining some weight.';
+              'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set H can supply right amount of calorie, \nbetween 1700kcal to 2100kcal, which suits your \nneed. \nThe recommendation can help you to maintain the energy reservation';
         } else if (equation >= 2100) {
           explanation =
-              'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set H can supply right amount of calorie, \nabove 2100kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and gaining some weight.';
+              'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set I can supply right amount of calorie, \nabove 2100kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation';
         }
       } else if (intensity == 'high') {
         if (statusBMI() == 'underweight' || statusBMI() == 'normal') {
@@ -203,13 +203,13 @@ class User {
         } else {
           if (equation < 1700) {
             explanation =
-                'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set G can supply right amount of calorie, \nunder 1700kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and losing some weight.';
+                'Your intensity of training is high.\nBut, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set G can supply right amount of calorie, \nunder 1700kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and losing some weight.';
           } else if (equation >= 1700 && equation < 2100) {
             explanation =
-                'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set H can supply right amount of calorie, \nbetween 1700kcal to 2100kcal, which suits your \nneed. \nThe recommendation can help you to maintain the energy reservation and losing some weight.';
+                'Your intensity of training is high.\nBut, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set H can supply right amount of calorie, \nbetween 1700kcal to 2100kcal, which suits your \nneed. \nThe recommendation can help you to maintain the energy reservation and losing some weight.';
           } else if (equation >= 2100) {
             explanation =
-                'Your intensity of training is moderate.\nThus, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set H can supply right amount of calorie, \nabove 2100kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and losing some weight.';
+                'Your intensity of training is high.\nBut, we recommend Moderate Intensive Meal Planning for your diet stratergy. \n\nWith the given calorie goal and BMI. \nThe food in Set I can supply right amount of calorie, \nabove 2100kcal, which suits your need. \n\nThe recommendation can help you to maintain the energy reservation and losing some weight.';
           }
         }
       }
